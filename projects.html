@@ -1,0 +1,220 @@
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio projects by Jordan Blake: Smart Factory, Portfolio, Drone Simulation, and more.">
+    <title>Projects | Jordan Blake</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #faf9ff;
+            color: #1f2a44;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: #0f172a;
+            padding: 1rem 2rem;
+            z-index: 100;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            background: #e94560;
+            outline: 2px solid #ffa69e;
+        }
+        .nav-links .active {
+            background: #e94560;
+        }
+        main {
+            max-width: 1300px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        /* Flexbox grid with flex-wrap */
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .project-card {
+            flex: 1 1 300px;
+            max-width: 350px;
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+            transition: all 0.25s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 1.2rem;
+        }
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .tech-stack {
+            margin: 0.8rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .tech-stack span {
+            background-color: #e94560;
+            color: white;
+            border-radius: 20px;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .cta-btn {
+            display: inline-block;
+            margin-top: 0.8rem;
+            background: #16213e;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+            text-align: center;
+        }
+        .cta-btn:hover {
+            background: #e94560;
+            outline: 2px solid #fb8da0;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #16213e;
+            padding: 0.7rem 1rem;
+            border-radius: 3rem;
+            color: white;
+            text-decoration: none;
+        }
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 1.3rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .projects-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-links {
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="about.html">👤 About</a></li>
+                <li><a href="projects.html" class="active">📁 Projects</a></li>
+                <li><a href="contact.html">📧 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>📌 Featured Work</h1>
+        <div class="projects-grid">
+            <!-- project 1 -->
+            <div class="project-card">
+                <img src="https://picsum.photos/id/29/400/250" alt="Factory analytics dashboard interface">
+                <div class="card-content">
+                    <h3>Smart Factory IoT</h3>
+                    <p>Predictive maintenance & real-time OEE dashboard using edge devices.</p>
+                    <div class="tech-stack">
+                        <span>Python</span><span>React</span><span>InfluxDB</span><span>MQTT</span>
+                    </div>
+                    <a href="#" class="cta-btn" aria-label="View case study for Smart Factory IoT">📊 View case study →</a>
+                </div>
+            </div>
+            <!-- project 2 -->
+            <div class="project-card">
+                <img src="https://picsum.photos/id/177/400/250" alt="Laptop with code and green plants">
+                <div class="card-content">
+                    <h3>Portfolio 2025</h3>
+                    <p>Fully responsive portfolio with focus on accessibility and flexbox.</p>
+                    <div class="tech-stack">
+                        <span>HTML/CSS</span><span>Flexbox</span><span>A11Y</span>
+                    </div>
+                    <a href="#" class="cta-btn" aria-label="View case study for Portfolio 2025">✨ View case study →</a>
+                </div>
+            </div>
+            <!-- project 3 -->
+            <div class="project-card">
+                <img src="https://picsum.photos/id/41/400/250" alt="Drone flying simulation">
+                <div class="card-content">
+                    <h3>Drone Swarm Sim</h3>
+                    <p>Simulation environment for multi-drone logistics (open-source).</p>
+                    <div class="tech-stack">
+                        <span>Three.js</span><span>WebGL</span><span>Node.js</span>
+                    </div>
+                    <a href="#" class="cta-btn" aria-label="View case study for Drone Swarm Sim">🚁 View case study →</a>
+                </div>
+            </div>
+            <!-- project 4 extra -->
+            <div class="project-card">
+                <img src="https://picsum.photos/id/91/400/250" alt="3d printed prototype">
+                <div class="card-content">
+                    <h3>CAD Automation</h3>
+                    <p>SolidWorks macro suite for design automation (reduced 40% drafting time).</p>
+                    <div class="tech-stack">
+                        <span>VBA</span><span>SolidWorks API</span><span>Python</span>
+                    </div>
+                    <a href="#" class="cta-btn" aria-label="View case study CAD Automation">⚙️ View case study →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2026 Jordan Blake – Creative Engineering & Code | <a href="#">License</a></p>
+    </footer>
+    <a href="#" class="back-to-top">⬆️ Top</a>
+</body>
+</html>

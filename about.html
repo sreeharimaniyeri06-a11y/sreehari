@@ -1,0 +1,217 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Jordan Blake, Mechanical Engineer, Web Developer, skills, and education.">
+    <title>About | Jordan Blake</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto;
+            background: #fcfcfc;
+            color: #1e1e2f;
+            line-height: 1.5;
+        }
+        /* Skip to main link - accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #e94560;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 1001;
+        }
+        .skip-link:focus {
+            top: 0;
+            outline: 3px solid #ffb347;
+        }
+        /* sticky nav */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: #16213e;
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-links a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: #e94560;
+            outline: 2px solid #ffb6c1;
+        }
+        .nav-links .active {
+            background-color: #e94560;
+            pointer-events: none;
+        }
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 1rem 1.5rem;
+        }
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+        .profile-img {
+            flex: 0 0 180px;
+        }
+        .profile-img img {
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .bio {
+            flex: 2;
+            font-size: 1rem;
+            background: #eef2f5;
+            padding: 1.5rem;
+            border-radius: 2rem;
+        }
+        /* skills inline-block custom list */
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        .skills-list li {
+            background: #16213e;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        .edu-list {
+            background: white;
+            padding: 1.2rem;
+            border-left: 5px solid #e94560;
+            margin: 1rem 0;
+        }
+        .edu-list li {
+            margin-left: 1.5rem;
+            padding: 0.3rem 0;
+        }
+        h2 {
+            margin: 1.5rem 0 0.75rem;
+            font-size: 1.8rem;
+        }
+        /* back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #16213e;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 3rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-to-top:hover {
+            background: #e94560;
+        }
+        footer {
+            background: #16213e;
+            text-align: center;
+            color: #ccc;
+            padding: 1.2rem;
+            margin-top: 3rem;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav class="sticky-nav" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="about.html" class="active">👤 About</a></li>
+                <li><a href="projects.html">📁 Projects</a></li>
+                <li><a href="contact.html">📧 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="profile-container">
+            <div class="profile-img">
+                <img src="https://picsum.photos/id/64/300/300" alt="Jordan Blake headshot casual portrait">
+            </div>
+            <div class="bio">
+                <p style="font-size: 1.2rem; font-weight: 500;">👋 Hi, I'm Jordan Blake — a Mechanical Engineer turned full-stack enthusiast. I blend hardware problem-solving with creative web design to build user-centric digital tools. Currently bridging robotics and modern front-end interfaces.</p>
+                <p>With 5+ years in mechatronics and a passion for clean code, I help teams transform complex concepts into accessible products.</p>
+            </div>
+        </div>
+
+        <h2>⚙️ Core Skills</h2>
+        <ul class="skills-list">
+            <li>SolidWorks</li>
+            <li>HTML/CSS</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Figma</li>
+            <li>PLC Programming</li>
+        </ul>
+
+        <h2>🎓 Education</h2>
+        <div class="edu-list">
+            <ul>
+                <li><strong>M.Sc. Mechanical Engineering</strong> – Stanford University, 2020</li>
+                <li><strong>B.E. Mechatronics</strong> – University of Michigan, 2018</li>
+                <li><strong>Certificate: Full Stack Web Development</strong> – freeCodeCamp, 2022</li>
+            </ul>
+        </div>
+
+        <h2>💡 Beyond work</h2>
+        <p>I mentor aspiring devs, contribute to open-source accessibility tools, and love 3D printing.</p>
+    </main>
+
+    <footer>
+        <p>© 2026 Jordan Blake – Built with accessibility in mind | <a href="#">Credits</a></p>
+    </footer>
+    <a href="#" class="back-to-top" aria-label="Back to top">⬆️ Back to Top</a>
+</body>
+</html>

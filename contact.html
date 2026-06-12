@@ -1,0 +1,232 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Jordan Blake – contact form, email, LinkedIn, GitHub.">
+    <title>Contact | Jordan Blake</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, 'Segoe UI', Helvetica;
+            background: #ffffff;
+            color: #1e293b;
+        }
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: #0f172a;
+            padding: 1rem 2rem;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+        .nav-links a:hover, .nav-links a:focus {
+            background: #e94560;
+            outline: 2px solid #fbc4c0;
+        }
+        .active {
+            background-color: #e94560;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem 1.8rem;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        .flex-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin-top: 1.5rem;
+        }
+        .contact-info {
+            flex: 1;
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+        }
+        .contact-info a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        .contact-form {
+            flex: 2;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+            background: white;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: 3px solid #e94560;
+            border-color: transparent;
+        }
+        .radio-group {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .radio-group label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: normal;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checkbox-group input {
+            width: auto;
+        }
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        button {
+            background: #16213e;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover, button:focus {
+            background: #e94560;
+            outline: 2px solid #ffc2b3;
+        }
+        .reset-btn {
+            background: #475569;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #16213e;
+            padding: 0.7rem 1.2rem;
+            border-radius: 3rem;
+            text-decoration: none;
+            color: white;
+        }
+        footer {
+            background: #0f172a;
+            text-align: center;
+            color: #94a3b8;
+            padding: 1.2rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            .flex-contact {
+                flex-direction: column;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="about.html">👤 About</a></li>
+                <li><a href="projects.html">📁 Projects</a></li>
+                <li><a href="contact.html" class="active">📧 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>📬 Let's Connect</h1>
+        <div class="flex-contact">
+            <div class="contact-info">
+                <h3>Reach out directly</h3>
+                <p>📧 <a href="mailto:jordan.blake@example.com">jordan.blake@example.com</a></p>
+                <p>🔗 <a href="https://linkedin.com/in/jordanblake" target="_blank" rel="noopener">linkedin.com/in/jordanblake</a></p>
+                <p>🐙 <a href="https://github.com/jordanblake" target="_blank">github.com/jordanblake</a></p>
+                <p style="margin-top: 1rem;">📍 Based in Austin, TX — open to freelance & collabs.</p>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="fullname">Full name *</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic">Topic</label>
+                        <select id="topic" name="topic">
+                            <option>Project collaboration</option>
+                            <option>Job opportunity</option>
+                            <option>Speaking / Mentorship</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <fieldset class="form-group">
+                        <legend>Preferred contact method</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" name="contact_method" value="email"> Email</label>
+                            <label><input type="radio" name="contact_method" value="linkedin"> LinkedIn</label>
+                            <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Tell me about your idea..."></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to occasional tech insights & updates</label>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit">Send message ✨</button>
+                        <button type="reset" class="reset-btn">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2026 Jordan Blake – Open for opportunities | <a href="#">Privacy</a></p>
+    </footer>
+    <a href="#" class="back-to-top">⬆️ Back to Top</a>
+</body>
+</html>
